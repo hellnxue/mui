@@ -33,14 +33,14 @@
 			<div id="slider" class="mui-slider">
 				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 					<a class="mui-control-item" href="#item1mobile">
-				待办公文
-			</a>
-					<a class="mui-control-item" href="#item2mobile">
-				已办公文
-			</a>
-					<a class="mui-control-item" href="#item3mobile">
-				全部公文
-			</a>
+						待办公文
+					</a>
+							<a class="mui-control-item" href="#item2mobile">
+						已办公文
+					</a>
+							<a class="mui-control-item" href="#item3mobile">
+						全部公文
+					</a>
 				</div>
 				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
 				<div class="mui-slider-group">
@@ -172,7 +172,13 @@
 				var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li></ul>';
 				var item2 = document.getElementById('item2mobile');
 				var item3 = document.getElementById('item3mobile');
+
+				//slider.slider().gotoItem(1);//默认选中第几项
+
+				/*切换触发slide事件*/
 				document.getElementById('slider').addEventListener('slide', function(e) {
+
+					console.log("hello mui");
 					if (e.detail.slideNumber === 1) {
 						if (item2.querySelector('.mui-loading')) {
 							setTimeout(function() {

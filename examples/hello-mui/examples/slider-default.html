@@ -81,6 +81,11 @@
 				swipeBack:true //启用右滑关闭功能
 			});
 			var slider = mui("#slider");
+
+			//获得slider插件对象  
+			 
+			slider.slider().gotoItem(1);//跳转到第index张图片，index从0开始；
+
 			document.getElementById("switch").addEventListener('toggle', function(e) {
 				if (e.detail.isActive) {
 					slider.slider({
